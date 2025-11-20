@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Noah Rudko - Postdoctoral Research Engineer</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom colors and use the Inter font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arkansas-red': '#9c1c3f', // U of A color influence
+                        'purdue-gold': '#cfb57a', // Purdue color influence
+                        'asu-maroon': '#8C1940', // Arizona State color influence
+                        'primary-dark': '#1e293b', // Slate-900 for dark text/elements
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensures smooth scroll behavior for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom styles for professional link hover */
+        .link-hover-effect {
+            transition: color 0.2s, background-color 0.2s, transform 0.2s;
+        }
+        .link-hover-effect:hover {
+            color: #9c1c3f; /* Arkansas Red */
+            transform: translateY(-2px);
+        }
+        /* Style for the presentations list */
+        .presentation-item, .publication-item {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            transition: background-color 0.2s;
+        }
+        .presentation-item:last-child, .publication-item:last-child {
+            border-bottom: none;
+        }
+        .publication-item:hover {
+            background-color: #f9fafb;
+        }
+        .timeline-dot {
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--color);
+            border-radius: 9999px;
+            left: -0.5rem;
+            top: 0;
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-primary-dark antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <h1 class="text-xl font-extrabold tracking-tight text-arkansas-red md:text-2xl">
+                Noah Rudko, PhD
+            </h1>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#about" class="text-gray-600 hover:text-arkansas-red transition duration-150">About</a>
+                <a href="#research" class="text-gray-600 hover:text-arkansas-red transition duration-150">Research</a>
+                <a href="#publications" class="text-gray-600 hover:text-arkansas-red transition duration-150">Publications</a>
+                <a href="#skills" class="text-gray-600 hover:text-arkansas-red transition duration-150">Skills</a>
+                <a href="#teaching" class="text-gray-600 hover:text-arkansas-red transition duration-150">Teaching</a>
+                <a href="#awards" class="text-gray-600 hover:text-arkansas-red transition duration-150">Awards</a>
+                <a href="#contact" class="text-gray-600 hover:text-arkansas-red transition duration-150">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- 1. Introduction/About Section (Bio updated) -->
+        <section id="about" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl transition duration-300 hover:shadow-2xl">
+            <div class="flex flex-col md:flex-row items-start md:space-x-12">
+                <!-- Profile Image (Placeholder) -->
+                <div class="flex-shrink-0 mb-6 md:mb-0">
+                    <img src="https://placehold.co/180x180/E5E7EB/1F2937?text=Noah+R" 
+                         alt="Profile Picture of Dr. Noah Rudko" 
+                         class="w-40 h-40 object-cover rounded-full border-4 border-arkansas-red shadow-lg">
+                </div>
+                
+                <!-- Bio Content -->
+                <div>
+                    <h2 class="text-4xl font-bold text-primary-dark mb-4">Dr. Noah Rudko</h2>
+                    <p class="text-xl font-semibold text-arkansas-red mb-6">
+                        Postdoctoral Fellow, Biological and Agricultural Engineering Department, University of Arkansas
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Dr. Noah Rudko is an environmental research engineer focused on surface hydrology and water quality in agricultural regions. As a Postdoctoral Fellow at the 
+                        <span class="font-medium text-arkansas-red">University of Arkansas</span>, his research aims to develop insight into transport processes of nutrients and emerging contaminants such as PFAS in both urban and agricultural systems to recommend appropriate management strategies.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        He earned his PhD in 2024 from Purdue University, where his work highlighted the hydroclimatic variables that influence nutrient sources and pathways in tile-drained watersheds. He specializes in designing and implementing monitoring studies and leveraging geospatial data to improve water quality models and conservation practice implementation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Research Interests -->
+        <section id="research" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-arkansas-red border-b-2 border-purdue-gold pb-4 mb-8">
+                Current Research & Professional Experience
+            </h2>
+            <div class="space-y-6">
+                
+                <!-- Current Position -->
+                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-arkansas-red shadow-sm">
+                    <h3 class="text-xl font-bold text-primary-dark">Postdoctoral Fellow (08/2024 - Present)</h3>
+                    <p class="text-gray-600 mb-3">University of Arkansas</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                        <li>Designed and implemented PFAS monitoring of urban streams in NW Arkansas to quantify influence of sampling methods on concentration.</li>
+                        <li>Developing a quantitative database of PFAS in agricultural systems (soil, water, plants, livestock) to inform mitigation strategies.</li>
+                        <li>Identifying geospatial variables that predict farmer management to improve implementation of conservation practices in water quality models.</li>
+                    </ul>
+                </div>
+                
+                <!-- PhD Research -->
+                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-purdue-gold shadow-sm">
+                    <h3 class="text-xl font-bold text-primary-dark">Graduate Research Assistant (08/2021 - 08/2024)</h3>
+                    <p class="text-gray-600 mb-3">Purdue University</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                        <li>Quantified physical and biogeochemical processes influencing watershed-scale nutrient transport.</li>
+                        <li>Synthesized data from global studies of water quality monitoring studies that quantify agricultural BMP effectiveness.</li>
+                        <li>Led stream sampling and nutrient monitoring across multiple agricultural watersheds.</li>
+                    </ul>
+                </div>
+
+                <!-- MS Research -->
+                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-asu-maroon shadow-sm">
+                    <h3 class="text-xl font-bold text-primary-dark">Graduate Research Assistant (06/2019 - 05/2021)</h3>
+                    <p class="text-gray-600 mb-3">Arizona State University</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                        <li>Developed a hydrological and groundwater quality model of a Concentrated Animal Feeding Operation (CAFO) manure lagoon to determine parameters affecting pollutant fate and transport.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- 3. Education -->
+        <section id="education" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-arkansas-red border-b-2 border-purdue-gold pb-4 mb-8">
+                Education
+            </h2>
+            
+            <div class="space-y-8">
+                <!-- PhD (Purdue) -->
+                <div class="relative pl-8 border-l-4 border-purdue-gold">
+                    <div class="timeline-dot" style="--color: #cfb57a;"></div>
+                    <p class="text-xs text-gray-500 mb-1">2024</p>
+                    <h3 class="text-xl font-bold text-primary-dark">Doctor of Philosophy (PhD)</h3>
+                    <p class="text-lg text-gray-800">Agricultural & Biological Engineering, Purdue University, West Lafayette, IN</p>
+                    <p class="text-sm text-gray-600 mt-1 italic">
+                        Dissertation: *The Impact of Agricultural Conservation Practices on Water Quality in Tile-Drained Watersheds*.
+                    </p>
+                </div>
+                
+                <!-- MS (ASU) -->
+                 <div class="relative pl-8 border-l-4 border-asu-maroon">
+                    <div class="timeline-dot" style="--color: #8C1940;"></div>
+                    <p class="text-xs text-gray-500 mb-1">2021</p>
+                    <h3 class="text-xl font-bold text-primary-dark">Master of Science (M.S.)</h3>
+                    <p class="text-lg text-gray-800">Civil Engineering, Arizona State University, Tempe, AZ</p>
+                    <p class="text-sm text-gray-600 mt-1 italic">
+                        Thesis: *Hydrologic and Water Quality Modeling of a CAFO Dairy Lagoon*.
+                    </p>
+                </div>
+
+                <!-- BS (ASU) -->
+                 <div class="relative pl-8 border-l-4 border-asu-maroon">
+                    <div class="timeline-dot" style="--color: #8C1940;"></div>
+                    <p class="text-xs text-gray-500 mb-1">2019</p>
+                    <h3 class="text-xl font-bold text-primary-dark">Bachelor of Science (B.S.)</h3>
+                    <p class="text-lg text-gray-800">Civil Engineering, Arizona State University, Tempe, AZ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Publications Section (Updated and Detailed) -->
+        <section id="publications" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-arkansas-red border-b-2 border-purdue-gold pb-4 mb-8">
+                Publications
+            </h2>
+            
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4">Peer-Reviewed Articles</h3>
+            <ul class="divide-y divide-gray-100 border border-gray-100 rounded-lg mb-8">
+                <li class="publication-item">
+                    <p class="text-sm font-bold text-primary-dark">Rudko, N., McMillan, S. K., Frankenberger, J., Lay, D. W., & Limiac, A. (2024).</p>
+                    <p class="text-sm italic mt-1">Water quality sampling provides insight into nutrient sources and pathways in an agricultural watershed in the Midwestern USA.</p>
+                    <p class="text-xs text-gray-600 mt-0.5"><span class="font-medium">J. Nat. Resour. Agric. Ecosyst., 2(4), 153-165.</span> <a href="https://doi.org/10.13031/jnrae.15973" target="_blank" class="text-blue-600 hover:underline">DOI</a></p>
+                </li>
+                <li class="publication-item">
+                    <p class="text-sm font-bold text-primary-dark">Rudko, N., Muenich, R. L., Garcia, M., & Xu, T. (2023).</p>
+                    <p class="text-sm italic mt-1">Development of a point-source model to improve simulations of manure lagoon interactions with the environment.</p>
+                    <p class="text-xs text-gray-600 mt-0.5"><span class="font-medium">Journal of Environmental Management, 325, 116332.</span> <a href="https://doi.org/10.1016/j.jenvman.2022.116332" target="_blank" class="text-blue-600 hover:underline">DOI</a></p>
+                </li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4">Under Review</h3>
+            <ul class="divide-y divide-gray-100 border border-gray-100 rounded-lg mb-8">
+                <li class="publication-item bg-yellow-50/70">
+                    <p class="text-sm font-medium text-primary-dark">Khan, N., Paerl, H., McCarthy, M., Newell, S., Rudko, N., & Muenich, R. </p>
+                    <p class="text-sm font-bold mt-1">Trends in Maumee River nitrogen loads and their complex relationship to harmful algal blooms in Western Lake Erie.</p>
+                    <p class="text-xs text-gray-600 mt-0.5">Submitted to: <span class="font-medium">Water (MDPI).</span></p>
+                </li>
+                <li class="publication-item bg-yellow-50/70">
+                    <p class="text-sm font-medium text-primary-dark">Oates, C., Rudko, N., et al. (2025). </p>
+                    <p class="text-sm font-bold mt-1">Community-Based Approaches Highlight Opportunities and Limitations in Addressing Socioeconomic Barriers to Water Quality Monitoring in the United States.</p>
+                    <p class="text-xs text-gray-600 mt-0.5">Submitted to: <span class="font-medium">J. Nat. Resour. Agric. Ecosyst.</span></p>
+                </li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4">In Preparation</h3>
+            <ul class="divide-y divide-gray-100 border border-gray-100 rounded-lg">
+                <li class="publication-item bg-green-50/70">
+                    <p class="text-sm font-medium text-primary-dark">Rudko, N., Villeneuve, A., Gomes-Farias, J., Williams, C., & Muenich, R. </p>
+                    <p class="text-sm font-bold mt-1">Influence of surface water methods on PFAS concentrations.</p>
+                    <p class="text-xs text-gray-600 mt-0.5">Target Journal: <span class="font-medium">Journal of Environmental Quality.</span></p>
+                </li>
+                <li class="publication-item bg-green-50/70">
+                    <p class="text-sm font-medium text-primary-dark">Rudko, N., Muenich, R., Hamilton, K., Netshithothole, R., & Williams, C.</p>
+                    <p class="text-sm font-bold mt-1">A quantitative review of PFAS in agricultural systems: Implications for future management.</p>
+                    <p class="text-xs text-gray-600 mt-0.5">Target Journal: <span class="font-medium">Journal of Soil and Water Conservation.</span></p>
+                </li>
+                <li class="publication-item bg-green-50/70">
+                    <p class="text-sm font-medium text-primary-dark">Rudko, N., Muenich, R., Wilson, R., & Dillman-Hasso, N.</p>
+                    <p class="text-sm font-bold mt-1">Linking farmer management data to geospatial data for improved watershed modeling and management.</p>
+                    <p class="text-xs text-gray-600 mt-0.5">Target Journal: <span class="font-medium">Science of the Total Environment.</span></p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 5. Skills & Tools (New Section) -->
+        <section id="skills" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-arkansas-red border-b-2 border-purdue-gold pb-4 mb-8">
+                Technical Skills & Modeling
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Programming -->
+                <div class="p-6 bg-purdue-gold/10 rounded-lg border-l-4 border-purdue-gold">
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">Programming</h3>
+                    <p class="text-gray-700">R, MATLAB, Python</p>
+                </div>
+
+                <!-- Tools/Applications -->
+                <div class="p-6 bg-arkansas-red/10 rounded-lg border-l-4 border-arkansas-red">
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">Applications & GIS</h3>
+                    <p class="text-gray-700">ArcGIS Pro, Microsoft Suite</p>
+                </div>
+                
+                <!-- Modeling Experience -->
+                <div class="p-6 bg-asu-maroon/10 rounded-lg border-l-4 border-asu-maroon">
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">Modeling Software</h3>
+                    <p class="text-gray-700">SWAT, HEC-HMS, HEC-RAS, TRIBS</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-4 bg-gray-100 rounded-lg">
+                <h3 class="text-lg font-semibold text-primary-dark mb-1">Certification</h3>
+                <p class="text-gray-700 text-sm">Professional Certificate in Watershed Management, Indiana Watershed Leadership Academy (2023).</p>
+            </div>
+        </section>
+        
+        <!-- 6. Teaching & Mentoring (New Section) -->
+        <section id="teaching" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-arkansas-red border-b-2 border-purdue-gold pb-4 mb-8">
+                Teaching & Mentoring
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Teaching Experience -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Guest Lecturing & TA Roles</h3>
+                    <ul class="space-y-4 text-gray-700 text-sm">
+                        <li class="border-l-2 border-arkansas-red pl-3">
+                            <span class="font-bold">Guest Lecturer</span> - BENG 49303 Sustainable Watershed Engineering (U of A, Fall 2025). Assisted in curriculum development for watershed modeling exercises.
+                        </li>
+                        <li class="border-l-2 border-purdue-gold pl-3">
+                            <span class="font-bold">Graduate TA</span> - AGRY 560 Soil Physics (Purdue, Fall 2023). Managed labs, field sampling, and developed new methods for measuring hydraulic conductivity.
+                        </li>
+                        <li class="border-l-2 border-purdue-gold pl-3">
+                            <span class="font-bold">Graduate TA</span> - ABE 205 Engineering Computations for Biological Systems (Purdue, Fall 2022/2021). Taught data cleaning and statistical analysis using R.
+                        </li>
+                        <li class="border-l-2 border-asu-maroon pl-3">
+                            <span class="font-bold">Graduate TA</span> - CEE 440 Hydrology (ASU, Spring 2020/2021). Taught watershed delineation (GIS), hydrological calculations, and fieldwork.
+                        </li>
+                        <li class="border-l-2 border-asu-maroon pl-3">
+                            <span class="font-bold">Undergraduate TA</span> - CEE 210/212/213 (ASU, 2017-2019). Taught statics, dynamics, and deformable solids, including numerical techniques in MATLAB.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mentoring Experience -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Student Mentorship</h3>
+                    <ul class="space-y-4 text-gray-700 text-sm">
+                        <li class="border-l-2 border-arkansas-red pl-3">
+                            <span class="font-bold">University of Arkansas (2025):</span> Mentored four undergraduates (A. Neumeier, E. Waters, A. Russell, A. Villeneueve) in Biological and Agricultural Engineering.
+                        </li>
+                        <li class="border-l-2 border-purdue-gold pl-3">
+                            <span class="font-bold">Purdue University (2021-2024):</span> Mentored six students across ABE, Forestry, and Civil Engineering on research projects.
+                        </li>
+                        <li class="border-l-2 border-asu-maroon pl-3">
+                            <span class="font-bold">Arizona State University (2020-2021):</span> Mentored students on topics including clean water science and a rainwater harvesting project.
+                        </li>
+                        <li class="border-l-2 border-gray-400 pl-3">
+                            <span class="font-bold">Professional Service:</span> Member of the College of Engineering Staff Council, focusing on professional development for postdocs.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7. Honors & Awards (New Section) -->
+        <section id="awards" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-arkansas-red border-b-2 border-purdue-gold pb-4 mb-8">
+                Honors & Awards
+            </h2>
+            <div class="space-y-4 text-gray-700">
+                <div class="flex items-center space-x-3">
+                    <span class="text-purdue-gold text-2xl">★</span>
+                    <p class="font-semibold">Ross Fellowship for Doctoral studies</p> 
+                    <span class="text-sm text-gray-500">(Purdue University, Agricultural and Biological Engineering, Fall 2021 - Fall 2024)</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="text-purdue-gold text-2xl">★</span>
+                    <p class="font-semibold">2nd Place Oral Presentation</p> 
+                    <span class="text-sm text-gray-500">(Purdue Graduate Industrial Research Symposium, 2023)</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="text-purdue-gold text-2xl">★</span>
+                    <p class="font-semibold">3rd Place 3-Minute-Thesis</p> 
+                    <span class="text-sm text-gray-500">(Purdue Graduate Industrial Research Symposium, 2022)</span>
+                </div>
+                 <div class="flex items-center space-x-3">
+                    <span class="text-asu-maroon text-2xl">★</span>
+                    <p class="font-semibold">Leadership and Service Award</p> 
+                    <span class="text-sm text-gray-500">(Arizona State University, Civil, Environmental, and Sustainable Engineering, 2019)</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 8. Presentations (Existing Section, moved down) -->
+        <section id="presentations" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-arkansas-red border-b-2 border-purdue-gold pb-4 mb-8">
+                Selected Presentations
+            </h2>
+            
+            <ul class="divide-y divide-gray-100 border border-gray-100 rounded-lg">
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Villeneuve, A., Rudko, N., Gomes-Farias, J., Williams, C., Muenich, R.</p>
+                    <p class="text-sm font-bold mt-1">Quantifying the influence of sampling methods on PFAS and PFOA contamination estimates in surface waters.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">CANVAS</span>; November 2025; Salt Lake City, Utah.</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N., Muenich, R., Wilson, R., & Dillman-Hasso, N.</p>
+                    <p class="text-sm font-bold mt-1">Can geospatial data help to predict farm management data?</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">American Society of Agricultural and Biological Engineers Annual International Meeting</span>; July 2025; Toronto, Ontario.</p>
+                </li>
+                 <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N., Muenich, R., Hamilton, K., Netshithothole, R., & Williams, C.</p>
+                    <p class="text-sm font-bold mt-1">A quantitative review of PFAS in agricultural systems: Implications for future management.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">American Society of Agricultural and Biological Engineers Annual International Meeting</span>; July 2025; Toronto, Ontario.</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N.</p>
+                    <p class="text-sm font-bold mt-1">Systematic Review of Water Quality Monitoring Studies.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented to: <span class="italic">Natural Resources Conservation Service National Headquarters</span>; April 2025; Virtual. (Invited by the National Discipline Lead for Water Quality and Aquatic Ecology.)</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N.</p>
+                    <p class="text-sm font-bold mt-1">The Impact of Agricultural Conservation Practices on Water Quality in Tile-Drained Watersheds.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">University of Arkansas Biological and Agricultural Engineering Department Seminar</span>; February 2025; Fayetteville, Arkansas. (Invited)</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N., McMillan, S., Frankenberger, J., & Birgand, F.</p>
+                    <p class="text-sm font-bold mt-1">Sensitivity of nitrate hysteresis and flushing indices to lower frequency data in tile-drained watersheds.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">American Geophysical Union Fall Meeting</span>; December 2024; Washington, DC.</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N., McMillan, S., & Frankenberger, J.</p>
+                    <p class="text-sm font-bold mt-1">Water quality sampling provides insight into nutrient sources and pathways in an agricultural watershed in the Midwestern USA.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">American Geophysical Union Fall Meeting</span>; December 2023; San Francisco, California.</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N., McMillan, S., & Frankenberger, J.</p>
+                    <p class="text-sm font-bold mt-1">Water quality sampling provides insight into nutrient sources and pathways in an agricultural watershed in the Midwestern USA.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">Institute for a Sustainable Future Research Symposium</span>; October 2023; West Lafayette, Indiana.</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N., McMillan, S., Frankenberger, J., Lay, D., & Limiac, A.</p>
+                    <p class="text-sm font-bold mt-1">Water quality sampling provides insight into nutrient sources and pathways within the St. Mary’s River Watershed.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">Indiana Water Resources Association Symposium</span>; June 2023; West Lafayette, Indiana.</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N., McMillan, S., & Frankenberger, J.</p>
+                    <p class="text-sm font-bold mt-1">Assessing the Impact of Agricultural Conservation Practices on the Wabash Watershed.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">Joint Aquatic Sciences Annual Meeting</span>; May 2022; Grand Rapids, Michigan.</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N., Muenich, R., & Garcia, M.</p>
+                    <p class="text-sm font-bold mt-1">Development of a CAFO Lagoon Module to Advance Manure Management.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">American Society of Agricultural and Biological Engineers Annual International Meeting</span>; July 2020; Virtual.</p>
+                </li>
+                <li class="presentation-item">
+                    <p class="text-sm text-gray-800 font-medium">Rudko, N., Muenich, R., Garcia, M., & Xu, T.</p>
+                    <p class="text-sm font-bold mt-1">Hydrologic and Water Quality Modeling of a CAFO Dairy Lagoon.</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presented at: <span class="italic">American Geophysical Union Fall Meeting</span>; December 2020; Virtual.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 9. Contact & Links -->
+        <section id="contact" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-arkansas-red border-b-2 border-purdue-gold pb-4 mb-8">
+                Connect
+            </h2>
+            
+            <div class="flex flex-wrap gap-6 justify-center md:justify-start">
+                
+                <!-- Email -->
+                <a href="mailto:nrudko@uark.edu" class="flex items-center space-x-2 text-primary-dark link-hover-effect p-3 rounded-lg border border-gray-200">
+                    <!-- Icon: Mail -->
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path></svg>
+                    <span class="font-medium">nrudko@uark.edu</span>
+                </a>
+                
+                <!-- ORCID -->
+                <a href="https://orcid.org/0000-0002-7534-5375" target="_blank" class="flex items-center space-x-2 text-primary-dark link-hover-effect p-3 rounded-lg border border-gray-200">
+                    <!-- Icon: ORCID (using a circle/line placeholder) -->
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <span class="font-medium">ORCID: 0000-0002-7534-5375</span>
+                </a>
+
+                <!-- Google Scholar -->
+                <a href="https://scholar.google.com/citations?user=oOX5yzYAAAAJ&hl=en" target="_blank" class="flex items-center space-x-2 text-primary-dark link-hover-effect p-3 rounded-lg border border-gray-200">
+                    <!-- Icon: Book/Library (Mock Google Scholar) -->
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.206 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.894 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.894 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.106 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                    <span class="font-medium">Google Scholar</span>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/noahrudko/" target="_blank" class="flex items-center space-x-2 text-primary-dark link-hover-effect p-3 rounded-lg border border-gray-200">
+                    <!-- Icon: User Group (Mock LinkedIn) -->
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-3m-1.25-2.25A5.75 5.75 0 1010 16v4h4"></path></svg>
+                    <span class="font-medium">LinkedIn Profile (Confirmed)</span>
+                </a>
+            </div>
+            
+            <p class="text-center text-sm text-gray-500 mt-12 pt-6 border-t border-gray-100">
+                &copy; 2024 Noah Rudko. Built with simple, responsive design.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>
