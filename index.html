@@ -60,6 +60,33 @@
             box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
         }
     </style>
+        <script>
+        // JavaScript to handle rendering external links dynamically
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.publication-item, .proposal-item');
+
+            items.forEach(item => {
+                const projectLink = item.getAttribute('data-link');
+                
+                if (projectLink) {
+                    const linkContainer = item.querySelector('.link-container');
+                    if (linkContainer) {
+                        const isInternal = projectLink.startsWith('./') || projectLink.startsWith('/');
+                        const linkText = isInternal ? 'View Project Details' : 'Project Page / Details';
+                        
+                        const linkHtml = `
+                            <a href="${projectLink}" target="${isInternal ? '_self' : '_blank'}" class="text-xs text-blue-600 hover:underline flex items-center mt-1">
+                                <!-- Icon for External Link/Project Page -->
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${isInternal ? 'M10 19l-7-7m0 0l7-7m-7 7h18' : 'M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'}"></path></svg>
+                                ${linkText}
+                            </a>
+                        `;
+                        linkContainer.insertAdjacentHTML('beforeend', linkHtml);
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 <body class="bg-gray-50 font-sans text-primary-dark antialiased">
 
@@ -204,7 +231,7 @@
             
             <h3 class="text-2xl font-semibold text-primary-dark mb-4">Peer-Reviewed Articles</h3>
             <ul class="divide-y divide-gray-100 border border-gray-100 rounded-lg mb-8">
-                <li class="publication-item">
+                <li class="publication-item"data-link="./st_marys.html">
                     <p class="text-sm font-bold text-primary-dark">Rudko, N., McMillan, S. K., Frankenberger, J., Lay, D. W., & Limiac, A. (2024).</p>
                     <p class="text-sm italic mt-1">Water quality sampling provides insight into nutrient sources and pathways in an agricultural watershed in the Midwestern USA.</p>
                     <p class="text-xs text-gray-600 mt-0.5"><span class="font-medium">J. Nat. Resour. Agric. Ecosyst., 2(4), 153-165.</span> <a href="https://doi.org/10.13031/jnrae.15973" target="_blank" class="text-blue-600 hover:underline">DOI</a></p>
