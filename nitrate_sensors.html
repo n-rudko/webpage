@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details: USGS Nitrate Sensors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arkansas-red': '#9c1c3f',
+                        'purdue-gold': '#cfb57a',
+                        'primary-dark': '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-50 font-sans text-primary-dark antialiased">
+
+    <!-- Header for Project Page -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-extrabold tracking-tight text-arkansas-red">
+                Project Details
+            </h1>
+            <!-- Back to Main CV Link -->
+            <a href="./index.html#publications" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition duration-150">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to CV
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+        
+        <!-- Project Title and Summary -->
+        <section class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-arkansas-red">
+            <h2 class="text-4xl font-bold text-primary-dark mb-3">
+                Nitrate hysteresis and flushing indices in tile-drained watershed
+            </h2>
+            <p class="text-xl font-semibold text-gray-700 mb-2"> 
+                Sensitivity to sampling interval
+            </p>
+
+            <!-- New subtle note indicating preliminary status -->
+            <p class="text-sm font-medium italic text-arkansas-red/80 mb-6">
+                Preliminary Results - Subject to change pending final review.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 text-sm mb-6 border-b pb-4">
+                <p><span class="font-bold">Lead Author:</span> Rudko, N.</p>
+                <p><span class="font-bold">Affiliation:</span> Purdue University</p>
+                <p><span class="font-bold">Published In:</span> Journal of American Water Resources Association (expected)</p>
+                <p><span class="font-bold">Year:</span> 2026</p>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-arkansas-red mb-4">Project Abstract</h3>
+            <p class="text-gray-700 leading-relaxed">
+Storm event-based metrics, such as hysteresis (HI) and flushing (FI), are commonly used to differentiate nitrate pathways and sources in watersheds. 
+Estimations of these event-based metrics typically use high frequency (15-minute – hourly) measurements, but daily data are also used due to their greater availability.
+To date, there has been no study quantifying how the accuracy of HI and FI might change as a function of sampling interval at the event scale, which could skew interpretation of potential nutrient pathways and sources. 
+We used continuous measurements of nitrate collected at 9 tile-drained watersheds throughout the Midwest for 448 storm events. HI and FI were estimated from resampled time series at different sampling frequencies (1,2, 4, 8, 16, and 24 hours). 
+The impact of higher interval measurements on HI and FI, compared to the reference 15-min data, was quantified using the Nash-Sutcliffe efficiency (NSE) and range of possible values for NSE were estimated through Monte Carlo simulations and bootstrapping. 
+HI and FI were both similarly affected by sampling interval, with predictions of HI and FI both decreasing to unacceptable levels (NSE <0.65) at sampling intervals > 8 hours. 
+    And at 8-hour sampling intervals, the percentage of storms within the same quadrant when plotting HI and FI in bivariate space ranged from 59 – 94% (median = 84%). 
+    No apparent correlation existed between these metrics and watershed characteristics, such as drainage area and land-use. Correlations between HI and FI and hydroclimatic variables were similar when using daily or 15-minute values, 
+    suggesting that daily measurements can still be used to make inferences on watershed processes controlling nitrate transport in agricultural watersheds in the Midwest. 
+    Our results also demonstrate that caution should be used when interpreting outcomes using longer sampling intervals to estimate HI and FI. 	 </p>
+        </section>
+
+                <!-- NEW SECTION: Key Figure -->
+        <section class="bg-white p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Key Figure</h3>
+            <figure class="mt-6 border border-gray-200 p-4 rounded-lg bg-gray-50">
+                <!-- 
+                    ACTION REQUIRED: 
+                    Replace the placeholder URL below with the public URL to the key diagram, map, or graph 
+                    from your publication. Use a high-resolution image.
+                -->
+                <img src="nitrate_sensor_graphic_abstract.png" 
+                     alt="Key research figure illustrating motivation, methods, and findings" 
+                     class="w-full h-auto rounded-lg shadow-md mb-3"
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x450/E5E7EB/6B7280?text=Figure+Load+Error';">
+                <figcaption class="text-sm text-center text-gray-600 italic">
+                    Figure 1: Graphical abstract highlighting time series resampling and how HI/FI patterns change at longer sampling intervals 
+                </figcaption>
+            </figure>
+        </section>
+
+         <section class="bg-white p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Key Figure</h3>
+            <figure class="mt-6 border border-gray-200 p-4 rounded-lg bg-gray-50">
+                <!-- 
+                    ACTION REQUIRED: 
+                    Replace the placeholder URL below with the public URL to the key diagram, map, or graph 
+                    from your publication. Use a high-resolution image.
+                -->
+                <img src="nitrate_period_of_record.png" 
+                     alt="Key research figure illustrating nitrate period of record and data gaps" 
+                     class="w-full h-auto rounded-lg shadow-md mb-3"
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x450/E5E7EB/6B7280?text=Figure+Load+Error';">
+                <figcaption class="text-sm text-center text-gray-600 italic">
+                    Figure 2: Period of record of nitrate included in this analysis, data gaps are highlighted in grey
+                </figcaption>
+            </figure>
+        </section>
+
+                 <section class="bg-white p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Key Figure</h3>
+            <figure class="mt-6 border border-gray-200 p-4 rounded-lg bg-gray-50">
+                <!-- 
+                    ACTION REQUIRED: 
+                    Replace the placeholder URL below with the public URL to the key diagram, map, or graph 
+                    from your publication. Use a high-resolution image.
+                -->
+                <img src="nitrate_fi_correlation_tile_drainage.png" 
+                     alt="Key research figure illustrating motivation, methods, and findings" 
+                     class="w-full h-auto rounded-lg shadow-md mb-3"
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x450/E5E7EB/6B7280?text=Figure+Load+Error';">
+                <figcaption class="text-sm text-center text-gray-600 italic">
+                    Figure 3: Relationship between average discharge 3 days before an event (AQ3) and the flushing index (FI). Sites are ordered by increasing tile drainage densities. 
+                    As tile drainage density increases, the dilution effect that occurs under wet conditions is more prominent
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Key Findings -->
+        <section class="bg-white p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Key Findings</h3>
+            <ul class="list-disc list-outside ml-6 space-y-3 text-gray-700">
+                <li>15 min publicly available nitrate data were used to estimate Hysteresis index (HI) and flushing index (FI) for 448 storm events at different sampling frequencies</li>
+                <li>Nitrate dynamics were captured for 90% of storm events at sampling intervals < 8 hours</li>
+                <li>Watersheds with greater tile drainage had more pronounced dilution patterns </li>
+				<li>Results provide guidance on suitable sampling intervals to estimate HI and FI  </li>
+
+            </ul>
+        </section>
+        
+        <!-- External Links/Downloads -->
+        <section class="bg-white p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Resources and Downloads</h3>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://doi.org/10.8675309 target="_blank" class="bg-blue-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-150">
+                    Full Publication (DOI)
+                </a>
+              <!--  <a href="https://github.com/YourGitHub/st-marys-wq/data" target="_blank" class="bg-gray-700 text-white font-medium px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-150"> 
+                    Data Repository (GitHub)
+                </a>
+                <a href="https://yourblog.com/post/st-marys-project-summary" target="_blank" class="bg-arkansas-red text-white font-medium px-4 py-2 rounded-lg hover:bg-arkansas-red/90 transition duration-150">
+                    Related Blog Post
+                </a> -->
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
