@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details: Water Quality Imputation Methods</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arkansas-red': '#9c1c3f',
+                        'purdue-gold': '#cfb57a',
+                        'primary-dark': '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-50 font-sans text-primary-dark antialiased">
+
+    <!-- Header for Project Page -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-extrabold tracking-tight text-arkansas-red">
+                Project Details
+            </h1>
+            <!-- Back to Main CV Link -->
+            <a href="./index.html#publications" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition duration-150">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to CV
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+        
+        <!-- Project Title and Summary -->
+        <section class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-arkansas-red">
+            <h2 class="text-4xl font-bold text-primary-dark mb-3">
+                Cross-domain learning for spatiotemporal water quality imputation
+            </h2>
+            <p class="text-xl font-semibold text-gray-700 mb-2"> 
+                case study in the Western Lake Erie Basin and comparison of existing methods
+            </p>
+
+            <!-- New subtle note indicating preliminary status -->
+            <p class="text-sm font-medium italic text-arkansas-red/80 mb-6">
+                Preliminary Results - Subject to change pending final review.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 text-sm mb-6 border-b pb-4">
+                <p><span class="font-bold">Lead Author:</span> Rudko, N.</p>
+                <p><span class="font-bold">Affiliation:</span> University of Arkansas</p>
+                <p><span class="font-bold">Published In:</span> Journal of the American Water Resources Association (expected)</p>
+                <p><span class="font-bold">Year:</span> 2026</p>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-arkansas-red mb-4">Project Abstract</h3>
+            <p class="text-gray-700 leading-relaxed">
+            Water quality is a field that is data rich but information poor: the reasoning behind “why” data was collected is often lacking, making it difficult to use water quality to make management decisions. Fewer than 20% of basins in the US have water quality observed in the last 2 years, and 95% of rivers in the US have three or fewer monitoring sites. 
+            Therefore, water quality imputation is a critical part of advancing the science of water quality management. We applied a novel cross-domain spatiotemporal model (CAPRI) that uses source variables (discharge) to predict target variables (water quality). 
+            The Western Lake Erie Basin has a spatial network of water quality stations that have been regularly monitored for decades, making it an appropriate location to assess the effectiveness of spatiotemporal imputation. We applied this model to NH4-N, NO3-N, SRP, and TP. 
+            We evaluated model performance (Nash-Sutcliffe Efficiency, PBIAS, and RMSE) and compared it to more commonly used water quality imputation models, LOADEST and WRTDS. We used a 6-year training (04/2015 – 11/2021), a 1-year validation period (11/2021 – 11/2022) and a 2-year testing period (11/2022 – 09/2024). 
+            A 10% mask was applied during training, and a 30% mask was applied during testing. The CAPRI model was the best performer for NH4-N, NO3-N, and TP, but was out-performed by LADEST and WRTDS for TP. 
+            We compared model performance with environmental and hydrologic variables (e.g., correlation between flow and concentration, number of upstream stations, distance to outlet, upstream drainage area). 
+            These results suggest that spatiotemporal imputation can be a powerful tool to resolve spatial and temporal data paucity in water quality datasets. 
+        	 </p>
+        </section>
+
+                <!-- NEW SECTION: Key Figure -->
+        <section class="bg-white p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Case Study Location</h3>
+            <figure class="mt-6 border border-gray-200 p-4 rounded-lg bg-gray-50">
+                <!-- 
+                    ACTION REQUIRED: 
+                    Replace the placeholder URL below with the public URL to the key diagram, map, or graph 
+                    from your publication. Use a high-resolution image.
+                -->
+                <img src="imputation_map.png" 
+                     alt="Location map of the Western Lake Erie Basin" 
+                     class="w-full h-auto rounded-lg shadow-md mb-3"
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x450/E5E7EB/6B7280?text=Figure+Load+Error';">
+                <figcaption class="text-sm text-center text-gray-600 italic">
+                    Figure 1: Water quality stations in the Western Lake Erie Basin
+                </figcaption>
+            </figure>
+        </section>
+
+                <section id="results" class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-arkansas-red border-b-2 border-purdue-gold pb-4 mb-8">
+            Results Summary
+            </h2>
+
+            <p class="text-gray-700 mb-6 max-w-3xl">
+            Nash-Sutcliffe Efficiency for each model and water quality constituent
+            </p>
+
+            <!-- CSV table will be injected here -->
+            <div id="results-table" class="overflow-x-auto"></div>
+
+            <p class="text-xs text-gray-500 mt-4 italic max-w-3xl">
+            Table 1. Overall model-performance
+            </p>
+        </section>
+
+                <section class="bg-white p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Model Performance</h3>
+            <figure class="mt-6 border border-gray-200 p-4 rounded-lg bg-gray-50">
+                <!-- 
+                    ACTION REQUIRED: 
+                    Replace the placeholder URL below with the public URL to the key diagram, map, or graph 
+                    from your publication. Use a high-resolution image.
+                -->
+                <img src="nse_params.png" 
+                     alt="A bar-chart showing performance of different water quality imputation models" 
+                     class="w-full h-auto rounded-lg shadow-md mb-3"
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x450/E5E7EB/6B7280?text=Figure+Load+Error';">
+                <figcaption class="text-sm text-center text-gray-600 italic">
+                    Figure 2: Nash-Sutcliffe Efficiency metric for WRTDS, LOADEST, and the newly developed GNN (or CAPRI) model. The GNN model out-performed the other models on average for NO3, NH4, and SRP.
+                </figcaption>
+            </figure>
+        </section>
+
+
+
+        <!-- Key Findings -->
+        <section class="bg-white p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Key Findings</h3>
+            <ul class="list-disc list-outside ml-6 space-y-3 text-gray-700">
+                <li>A cross-domain spatiotemporal water quality imputation model was tested in the Western Lake Erie Basin </li>
+                <li>The machine learning model was out-performed WRTDS and LOADEST for all parameters except for TP. </li>
+                <li>A higher correlation between observed concentration and flow was associated with better performance of the regression-based models (e.g., TP) </li>
+				<li>These results demonstrate the feasibility of using spatiotemporal relationships to fill in water quality gaps</li>
+
+            </ul>
+        </section>
+        
+        <!-- External Links/Downloads -->
+        <section class="bg-white p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-2">Resources and Downloads</h3>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://doi.org/10.8675309 target="_blank" class="bg-blue-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-150">
+                    Full Publication (DOI)
+                </a>
+              <!--  <a href="https://github.com/YourGitHub/st-marys-wq/data" target="_blank" class="bg-gray-700 text-white font-medium px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-150"> 
+                    Data Repository (GitHub)
+                </a>
+                <a href="https://yourblog.com/post/st-marys-project-summary" target="_blank" class="bg-arkansas-red text-white font-medium px-4 py-2 rounded-lg hover:bg-arkansas-red/90 transition duration-150">
+                    Related Blog Post
+                </a> -->
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+<script>
+async function loadCSVTable(csvPath, containerId) {
+    const response = await fetch(csvPath);
+    const text = await response.text();
+
+    const rows = text.trim().split('\n').map(r => r.split(','));
+    const headers = rows.shift();
+
+    let tableHTML = `
+        <table class="min-w-full border border-gray-200 rounded-lg overflow-hidden text-sm">
+            <thead class="bg-gray-100 text-primary-dark">
+                <tr>
+                    ${headers.map(h => `
+                        <th class="px-4 py-3 text-left font-semibold border-b">
+                            ${h}
+                        </th>
+                    `).join('')}
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+    `;
+
+    rows.forEach(row => {
+        tableHTML += `
+            <tr class="hover:bg-gray-50">
+                ${row.map(cell => `
+                    <td class="px-4 py-3">${cell}</td>
+                `).join('')}
+            </tr>
+        `;
+    });
+
+    tableHTML += `
+            </tbody>
+        </table>
+    `;
+
+    document.getElementById(containerId).innerHTML = tableHTML;
+}
+
+// Load nitrate sensor results
+document.addEventListener('DOMContentLoaded', () => {
+    loadCSVTable('./gnn_results.csv', 'results-table');
+});
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
