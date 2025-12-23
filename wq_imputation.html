@@ -82,7 +82,7 @@
                     Replace the placeholder URL below with the public URL to the key diagram, map, or graph 
                     from your publication. Use a high-resolution image.
                 -->
-                <img src="imputation_map.png" 
+                <img src="Figures/imputation_map.png" 
                      alt="Location map of the Western Lake Erie Basin" 
                      class="w-full h-auto rounded-lg shadow-md mb-3"
                      onerror="this.onerror=null; this.src='https://placehold.co/800x450/E5E7EB/6B7280?text=Figure+Load+Error';">
@@ -111,7 +111,7 @@
                     Replace the placeholder URL below with the public URL to the key diagram, map, or graph 
                     from your publication. Use a high-resolution image.
                 -->
-                <img src="nse_params.png" 
+                <img src="Figures/nse_params.png" 
                      alt="A bar-chart showing performance of different water quality imputation models" 
                      class="w-full h-auto rounded-lg shadow-md mb-3"
                      onerror="this.onerror=null; this.src='https://placehold.co/800x450/E5E7EB/6B7280?text=Figure+Load+Error';">
@@ -197,7 +197,7 @@ async function loadCSVTable(csvPath, containerId) {
 
 // Load nitrate sensor results
 document.addEventListener('DOMContentLoaded', () => {
-    loadCSVTable('./gnn_results.csv', 'results-table');
+    loadCSVTable('./Tables/gnn_results.csv', 'results-table');
 });
 </script>
 </html>
